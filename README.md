@@ -32,6 +32,7 @@ Usage examples
 ==============
 
 Parse a file for informations:
+
 	lvp = LVbitxParse()
 	lvp.OpenFile("NiFpga_niScopeEXP2PInterleavedDataFPGA.lvbitx")
 	regList = lvp.GetRegisterList()
@@ -42,6 +43,7 @@ Parse a file for informations:
 	bitstream = lvp.GetBitstream()
 
 Modify some informations in a file:
+
 	lvp = LVbitxParse()
 	lvc = LVbitxCreate()
 	lvp.OpenFile("NiFpga_niScopeEXP2PInterleavedDataFPGA.lvbitx")
