@@ -32,23 +32,23 @@ Usage examples
 ==============
 
 Parse a file for informations:
-  lvp = LVbitxParse()
-  lvp.OpenFile("NiFpga_niScopeEXP2PInterleavedDataFPGA.lvbitx")
-  regList = lvp.GetRegisterList()
-  dmaChannels = lvp.GetDmaChannels()
-  regBlocks = lvp.GetRegisterBlocks()
-  baseClocks = lvp.GetUsedBaseClocks()
-  signature = lvp.GetSignature()
-  bitstream = lvp.GetBitstream()
+	lvp = LVbitxParse()
+	lvp.OpenFile("NiFpga_niScopeEXP2PInterleavedDataFPGA.lvbitx")
+	regList = lvp.GetRegisterList()
+	dmaChannels = lvp.GetDmaChannels()
+	regBlocks = lvp.GetRegisterBlocks()
+	baseClocks = lvp.GetUsedBaseClocks()
+	signature = lvp.GetSignature()
+	bitstream = lvp.GetBitstream()
 
 Modify some informations in a file:
-  lvp = LVbitxParse()
-  lvc = LVbitxCreate()
-  lvp.OpenFile("NiFpga_niScopeEXP2PInterleavedDataFPGA.lvbitx")
-  lvc.registers = lvp.GetRegisterList()
-  lvc.channels = lvp.GetDmaChannels()
-  lvc.registerBlocks = lvp.GetRegisterBlocks()
-  lvc.usedBaseClocks = lvp.GetUsedBaseClocks()
-  lvc.channels[0].name = "NewChannelName"
-  lvc.signatureRegister = lvp.GetSignature()
-  output = lvc.Generate()
+	lvp = LVbitxParse()
+	lvc = LVbitxCreate()
+	lvp.OpenFile("NiFpga_niScopeEXP2PInterleavedDataFPGA.lvbitx")
+	lvc.registers = lvp.GetRegisterList()
+	lvc.channels = lvp.GetDmaChannels()
+	lvc.registerBlocks = lvp.GetRegisterBlocks()
+	lvc.usedBaseClocks = lvp.GetUsedBaseClocks()
+	lvc.channels[0].name = "NewChannelName"
+	lvc.signatureRegister = lvp.GetSignature()
+	output = lvc.Generate()
